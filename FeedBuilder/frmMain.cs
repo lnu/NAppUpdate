@@ -554,7 +554,7 @@ namespace FeedBuilder
 
 			if (!Path.IsPathRooted(absolutePath))
 			{
-				absolutePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), path);
+				absolutePath = Path.Combine(Environment.CurrentDirectory, path);
 			}
 
 			if (!absolutePath.EndsWith("\\"))
